@@ -8,7 +8,7 @@
 <body class="max-w-[2000px] text-neutral-900 dark:text-neutral-200 bg-white dark:bg-neutral-800">
     <nav class="mx-auto p-4 bg-amber-400 z-50">
         <div class="container mx-auto flex items-center justify-between">
-            <a href="/" class="outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 hover:opacity-75 transition-opacity">
+            <a href="/" class="outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 hover:opacity-75 transition-opacity z-50">
                 <img src="./images/logo.svg" alt="logo" aria-label="Go to homepage width='200" class="w-48 md:w-64 lg:w-72">
             </a>
             <button id="menu" class="lg:hidden outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900 hover:text-neutral-600 transition-colors">
@@ -16,7 +16,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
             </button>
-            <div id="nav-menu" role="menubar" class="flex flex-col gap-1 absolute right-0 left-0 top-16 bg-amber-400 shadow-xl text-center p-6 text-lg items-center lg:static lg:flex lg:flex-row lg:shadow-none lg:justify-between lg:w-full hidden ">
+            <div id="nav-menu" role="menubar" class="flex flex-col gap-1 absolute right-0 left-0 top-16 bg-amber-400 shadow-xl text-center p-6 text-lg items-center lg:static lg:flex lg:flex-row lg:shadow-none lg:justify-between lg:w-full hidden z-40">
                 <a href="/" role="menuitem" class="py-1 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900">Home</a>
                 <a href="/" role="menuitem" class="py-1 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900 lg:mr-auto">Contact</a>
                 <a href="/" role="menuitem" class="py-1 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900">Login</a>
@@ -25,11 +25,26 @@
             </div>
         </div>
     </nav>
+    <header class="relative pt-16 md:pt-24 lg:pt-48">
+        <div class="absolute inset-0 bottom-8 md:bottom-24 xl:bottom-32 -z-10 bg-linear-to-b from-amber-400 to-amber-600"></div>
+        <div class="container mx-auto grid grid-rows-1 place-items-end px-2">
+            <img src="./images/couch.png" alt="" class="row-start-1 row-end-2 col-start-1 col-end-2 mx-auto">
+            <img src="./images/app.svg" alt="" class="row-start-1 row-end-2 col-start-1 col-end-2 mx-auto w-40 sm:w-45 md:w-64 lg:w-72" >
+        </div>
+    </header>
 
+    <main class="grid gap-12 sm:gap-6 md:gap-24 lg:gap-35 px-8 overflow-hidden">
+        <a href="" class=" mx-auto my-12 flex gap-2 py-2 px-6 text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-md bg-amber-400 shadow-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+
+            <span>Download the App</span>
+        </a>
+    </main>
     <script>
         const menuBtn = document.getElementById('menu');
         const navMenu = document.getElementById('nav-menu');
-
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('hidden');
         });
