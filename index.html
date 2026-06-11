@@ -5,9 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="max-w-[2000px] text-neutral-900 dark:text-neutral-200 bg-white dark:bg-neutral-800">
+    <nav class="mx-auto p-4 bg-amber-400 z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="/" class="outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 hover:opacity-75 transition-opacity">
+                <img src="./images/logo.svg" alt="logo" aria-label="Go to homepage width='200" class="w-48 md:w-64 lg:w-72">
+            </a>
+            <button id="menu" class="lg:hidden outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900 hover:text-neutral-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>
+            </button>
+            <div id="nav-menu" role="menubar" class="flex flex-col gap-1 absolute right-0 left-0 top-16 bg-amber-400 shadow-xl text-center p-6 text-lg items-center lg:static lg:flex lg:flex-row lg:shadow-none lg:justify-between lg:w-full hidden ">
+                <a href="/" role="menuitem" class="py-1 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900">Home</a>
+                <a href="/" role="menuitem" class="py-1 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900 lg:mr-auto">Contact</a>
+                <a href="/" role="menuitem" class="py-1 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-sm ring-offset-amber-400 text-neutral-900">Login</a>
+
+                <a href="/" role="menuitem" class="py-2 px-6 dark:text-neutral-900 outline-none focus:ring-4 focus-visible:ring-neutral-900 ring-offset-4 rounded-md ring-offset-amber-400 text-white bg-teal-900 shadow-xl">Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
