@@ -1,1 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
+
 @import "tailwindcss";
+
+@theme{
+    /* breakpoints */
+    --breakpoint-sm:340px;
+    --breakpoint-md:540px;
+    --breakpoint-lg:768px;
+    --breakpoint-xl:1180px;
+
+    /* font */
+    --font-jost:"Jost", sans-serif;
+    --font-lobster:"Lobster", sans-serif;
+}
