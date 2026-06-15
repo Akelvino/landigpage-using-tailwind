@@ -58,15 +58,28 @@ h1 {
 @import "tailwindcss";
 
 @theme {
-  --animate-moveY: move 3s linear infinite;
+  --animate-move: moveY 3s linear infinite;
+  --animate-spin: spin 15s linear infinite;
+  --animate-scale: scaleUp 3s linear infinite;
 
-  @keyframes move {
-    0%, 100% {
-      transform: translateY(0);
+  @keyframes moveY{
+    0%,100%{
+      transform:translateY(0)
     }
-
     50% {
-      transform: translateY(-1rem);
+      transform: translateY(-1rem)
     }
+  }
+  @keyframes spin{
+    0%{
+      transform:rotate(0deg)
+    }
+     100%{
+      transform:rotate(360deg)
+    }
+  }
+  @keyframes scaleUp{
+    0%,100%{transform:scale(0.8)}
+    50%{transform:scale(1.2)}
   }
 }
