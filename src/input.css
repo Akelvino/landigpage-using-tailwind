@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+
+
 @theme{
     /* breakpoints */
     --breakpoint-sm:340px;
@@ -55,7 +57,7 @@ h1 {
     @apply text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer text-base;
 }
 
-@import "tailwindcss";
+
 
 @theme {
   --animate-move: moveY 3s linear infinite;
