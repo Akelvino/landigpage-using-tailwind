@@ -15,9 +15,11 @@
     --font-jost:"Jost", sans-serif;
     --font-lobster:"Lobster", sans-serif;
 }
-
+html{
+  @apply overflow-x-hidden scroll-smooth;
+}
 body{
-    @apply bg-green-950 text-white font-jost tracking-wide container mx-auto
+    @apply bg-green-950 text-white font-jost tracking-wide container mx-auto;
 }
 
 @utility container1 {
@@ -30,7 +32,7 @@ body{
 }
 
 .nav-link{
-    @apply text-lg font-bold duration-300 hover:text-yellow-500
+    @apply text-lg font-bold duration-300 hover:text-yellow-500;
 }
 
 section{
@@ -76,7 +78,9 @@ h3 {
 .swiper-pagination-bullet{
   @apply bg-green-900
 }
-
+.smi{
+  @apply hover:text-yellow-500 duration-300 cursor-pointer text-green-400
+}
 @theme {
   --animate-move: moveY 3s linear infinite;
   --animate-spin: spin 15s linear infinite;
