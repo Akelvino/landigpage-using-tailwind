@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <link href="./src/output.css" rel="stylesheet">
 </head>
 <body>
@@ -276,7 +277,77 @@
                  </div>
             </div>
          </section>
+
+         <section id="review">
+            <div class="flex flex-col gap-3 text-center mb-10 md:mb-20">
+                <h2 class="title">Customer Review</h2>
+                <p class="max-w-2xl">Follow instructions for more</p>
+            </div>
+            <div class="container1">
+                <div class="swiper py-12">
+                    <ul class="swiper-wrapper mb-10">
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6 ">
+                                <p class="font-lobster">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus modi quis error recusandae autem accusamus, molestias pariatur ab numquam?</p>
+                                <div class="flex items-center">
+                                    <img src="./images/review-1.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <div class="ml-2">
+                                        <p class="text-yellow-500 uppercase">John doe</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>                        
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6 ">
+                                <p class="font-lobster">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus modi quis error recusandae autem accusamus, molestias pariatur ab numquam?</p>
+                                <div class="flex items-center">
+                                    <img src="./images/review-2.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <div class="ml-2">
+                                        <p class="text-yellow-500 uppercase">John doe</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>                        
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6 ">
+                                <p class="font-lobster">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus modi quis error recusandae autem accusamus, molestias pariatur ab numquam?</p>
+                                <div class="flex items-center">
+                                    <img src="./images/review-3.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <div class="ml-2">
+                                        <p class="text-yellow-500 uppercase">John doe</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>                        
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6 ">
+                                <p class="font-lobster">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus modi quis error recusandae autem accusamus, molestias pariatur ab numquam?</p>
+                                <div class="flex items-center">
+                                    <img src="./images/review-4.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <div class="ml-2">
+                                        <p class="text-yellow-500 uppercase">John doe</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>                        
+                            </div>
+                        </li>
+                       
+                    </ul>
+                    
+                     <div class="swiper-pagination"></div>
+                </div>
+                
+            </div>
+         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
         const navMenu = document.getElementById("nav-menu");
         const navLink = document.querySelectorAll(".nav-link");
@@ -293,6 +364,35 @@
                 hamburg.classList.toggle("ri-close-large-fill")
             })
         })
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            speed:400,
+            spaceBetween:30,
+            autoplay:{
+                delay:3000,
+                disableOnInteraction:false,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            grabCursor:true,
+            breakpoints:{
+                640:{
+                    slidesPerView:1
+                },
+                768:{
+                    slidesPerView:2
+                },
+                1024:{
+                    slidesPerView:3
+                }
+            }
+        });
     </script>
 </body>
 </html>
